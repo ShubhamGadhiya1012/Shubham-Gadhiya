@@ -9,16 +9,15 @@ class BankCustomer {
 	    this.lastName = lastName;
 	  }
 	  
-	  public String fname() {
-		return firstName;
-		  
-	  }
-//	  public void display() {
-//		  
-//		  System.out.println("First Name :" +" "+firstName);
-//		  System.out.println("Last Name :" +" "+lastName);
-//	  }
+	 
+
+
+@Override
+	public String toString() {
+		return "BankCustomer [firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
+
+}
 
 
 class BankAccount {
@@ -29,12 +28,13 @@ class BankAccount {
 	    this.forCust = forCust;
 	    this.balance = balance;
 	  }
+
+	@Override
+	public String toString() {
+		return "BankAccount [forCust=" + forCust + ", balance=" + balance + "]";
+	}
 	  
- public void display() {
-		  
-		  System.out.println("First Name :" +" "+forCust);
-		  System.out.println("Last Name :" +" "+balance);
-	  }
+ 
 	  
 	  
 	}
@@ -47,9 +47,7 @@ public class Question_3 {
 		BankCustomer sc = new BankCustomer("Shubham","Gadhiya");
 		BankAccount ac = new BankAccount(sc,234000);
 		
-//		sc.display();
-		ac.display();
-		
+		System.out.println(ac);
 		
 		
 	}
